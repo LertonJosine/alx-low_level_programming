@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-
+#include <stdlib.h>
 /**
  * print_name - prints the name using a pointer to function
  * @name: is the name to be printed
@@ -8,5 +8,7 @@
 
 void print_name(char *name, void (*f)(char *))
 {
+
+if (name != NULL && *name != '\0' && f != NULL)
 (*f)(name);
 }
